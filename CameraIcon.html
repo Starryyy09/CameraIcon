@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Camera Icon</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .rotating-lens {
+      transform-origin: 150px 165px;
+      animation: spinLens 4s linear infinite;
+    }
+
+    @keyframes spinLens {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <rect x="65" y="75" width="30" height="12" rx="4" fill="#ff5e57" />
+    <path d="M 115 85 L 125 65 L 175 65 L 185 85 Z" fill="#2f3542" />
+    <rect x="40" y="85" width="220" height="150" rx="20" fill="#2f3542" />
+    <rect x="40" y="105" width="220" height="12" fill="#57606f" />
+    <rect x="215" y="95" width="25" height="15" rx="4" fill="#ffa502" />
+    <circle cx="150" cy="165" r="55" fill="#1e272e" stroke="#dfe4ea" stroke-width="6" />
+
+    <g class="rotating-lens">
+      <circle cx="150" cy="165" r="38" fill="#0fbcf9" />
+      <circle cx="150" cy="165" r="30" fill="none" stroke="#1e272e" stroke-width="5" stroke-dasharray="14 10" />
+      <circle cx="150" cy="165" r="16" fill="#1e272e" />
+      <circle cx="142" cy="157" r="5" fill="#ffffff" />
+    </g>
+  </svg>
+
+</body>
+</html>
